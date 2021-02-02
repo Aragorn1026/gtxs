@@ -1,5 +1,5 @@
 server:
-  port: 12306
+  port: 12307
 
 spring:
   application:
@@ -17,7 +17,7 @@ mybatis:
 
 test:
   datasource:
-    url: jdbc:mysql://59.111.148.79:3306/db02?useSSL=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://59.111.148.79:3306/db02
     username: root
     password: 327604_Zcq
     driver-class-name: com.mysql.jdbc.Driver
