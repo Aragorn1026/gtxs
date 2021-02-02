@@ -1,0 +1,35 @@
+server:
+  port: 12306
+
+spring:
+  application:
+    name: gtxsdemoxabranch
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/db02?useSSL=true&useUnicode=true&characterEncoding=UTF-8
+#    username: root
+#    password: WYfc&20202
+#    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.gtxs.demo.pojo
+  cofig-location: classpath*:mybatis/mabatis-controller.xml
+  mapper-locations: classpath*:mybatis/mapper/*.xml
+
+test:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db02?useSSL=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: WYfc&20202
+    driver-class-name: com.mysql.jdbc.Driver
+
+gtxs:
+  client:
+    txGroupId: 4b654d0a-2272-446b-adc1-bca4b23714ec
+  server:
+    address: gtxs-server-cust56.netease.com:9627
+  message:
+    local: true
+  service:
+    disable: false
+  logging:
+    level: debug

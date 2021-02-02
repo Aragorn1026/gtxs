@@ -1,0 +1,21 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE configuration-->
+<!--        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-3-config.dtd">-->
+<!--<configuration>&lt;!&ndash;核心配置文件&ndash;&gt;-->
+<!--    <environments default="development">-->
+<!--        <environment id="development">-->
+<!--            <transactionManager type="JDBC"/>&lt;!&ndash;事务管理&ndash;&gt;-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="com.mysql.jdbc.Driver"/>-->
+<!--                <property name="url" value="jdbc:mysql://localhost:3306/db01?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>-->
+<!--                <property name="username" value="root"/>-->
+<!--                <property name="password" value="WYfc&amp;20202"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+<!--    &lt;!&ndash;每一个Mapper.xml都需要在MyBatis核心配置中注册&ndash;&gt;-->
+<!--    <mappers>-->
+<!--        <mapper resource="com/gtxs/demo/dao/DeptMapper.xml"/>-->
+<!--    </mappers>-->
+<!--</configuration>-->

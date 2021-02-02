@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 绑定一个对应的dao/mapper接口-->
+<mapper namespace="com.gtxs.demo.dao.DeptDao">
+
+    <insert id="addDept" parameterType="com.gtxs.demo.pojo.Dept">
+        insert into dept(dname, db_source)
+        values (#{dname},DATABASE())
+    </insert>
+
+    <select id="queryById" resultType="com.gtxs.demo.pojo.Dept" parameterType="Integer">
+        select * from dept where deptno = #{deptno};
+    </select>
+
+    <select id="queryAll" resultType="com.gtxs.demo.pojo.Dept">
+        select * from dept;
+    </select>
+
+    <delete id="deleteDept" parameterType="Integer">
+        delete from dept where deptno = #{deptno};
+    </delete>
+
+    <select id="descDeptno" resultType="Integer">
+        select deptno from dept order by deptno desc limit 1;
+    </select>
+
+</mapper>
