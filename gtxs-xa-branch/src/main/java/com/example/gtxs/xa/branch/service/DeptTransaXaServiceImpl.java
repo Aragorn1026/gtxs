@@ -11,10 +11,13 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class DeptTransaXaServiceImpl implements DeptTransaXaService{
+public class DeptTransaXaServiceImpl implements com.example.gtxs.xa.branch.service.DeptTransaXaService{
 
     @Autowired
     private DeptDao deptDao;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Transactional(rollbackFor = Exception.class)
     @GtxsXATransaction(name = "xabranch")

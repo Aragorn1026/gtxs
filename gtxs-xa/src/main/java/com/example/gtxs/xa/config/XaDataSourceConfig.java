@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import javax.sql.DataSource;
 import com.mysql.jdbc.jdbc2.optional.MysqlXADataSource;
 
-//@Configuration
-//@Component
+@Configuration
+@Component
 public class XaDataSourceConfig {
 
     @Bean

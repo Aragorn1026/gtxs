@@ -24,9 +24,9 @@ public class DeptTransaXaServiceImpl implements com.example.gtxs.xa.service.Dept
     public void addDept(Dept dept){
         deptDao.addDept(dept);
 
-        MultiValueMap<String, Object> paramMap = new LinkedMultiValueMap<String, Object>();
-        paramMap.add("dname", "信息部");
-        restTemplate.postForObject("http://127.0.0.1:12306/transa/xa/add",paramMap,String.class);
-        throw new RuntimeException("gtxs xa mode 测试报个错");
+//        MultiValueMap<String, Object> paramMap = new LinkedMultiValueMap<String, Object>();
+//        paramMap.add("dname", "信息部");
+//        restTemplate.postForObject("http://127.0.0.1:12306/transa/xa/add",paramMap,String.class);
+//        throw new RuntimeException("gtxs xa mode 测试报个错");
     }
 }

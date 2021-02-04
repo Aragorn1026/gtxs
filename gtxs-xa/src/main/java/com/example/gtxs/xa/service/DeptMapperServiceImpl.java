@@ -2,8 +2,10 @@ package com.example.gtxs.xa.service;
 
 import com.example.gtxs.xa.dao.DeptDao;
 import com.example.gtxs.xa.pojo.Dept;
+import com.netease.cloud.gtxs.core.annotation.GtxsXATransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -14,6 +16,8 @@ public class DeptMapperServiceImpl implements DeptMapperService{
     private DeptDao deptDao;
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
+    @GtxsXATransaction(name = "xadept")
     public boolean addDept(Dept dept) {
         return deptDao.addDept(dept);
     }
@@ -35,6 +39,7 @@ public class DeptMapperServiceImpl implements DeptMapperService{
     }
 
     @Override
-    public Integer descDeptno(){ return deptDao.descDeptno();
+    public Integer descDeptno(){
+        return deptDao.descDeptno();
     }
 }
