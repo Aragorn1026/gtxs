@@ -5,7 +5,7 @@
 <mapper namespace="com.example.gtxs.xa.dao.DeptDao">
 
     <insert id="addDept" parameterType="com.example.gtxs.xa.pojo.Dept">
-        insert into dept(deptno, dname, db_source) values (7,#{dname},DATABASE());
+        insert into dept(deptno, dname, db_source,length) values (13,'xadname','db01',13);
     </insert>
 
     <select id="queryById" resultType="com.example.gtxs.xa.pojo.Dept" parameterType="Integer">
@@ -13,7 +13,7 @@
     </select>
 
     <select id="queryAll" resultType="com.example.gtxs.xa.pojo.Dept">
-        select * from dept;
+        select deptno, dname, db_source, length from dept;
     </select>
 
     <delete id="deleteDept" parameterType="Integer">

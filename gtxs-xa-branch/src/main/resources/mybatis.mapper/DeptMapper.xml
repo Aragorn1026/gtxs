@@ -5,7 +5,8 @@
 <mapper namespace="com.example.gtxs.xa.branch.dao.DeptDao">
 
     <insert id="addDept" parameterType="com.example.gtxs.xa.branch.pojo.Dept">
-        insert into dept(deptno,dname) values (7,"xabranch");
+
+        INSERT INTO dept (deptno, dname, dbsource, `length`) VALUES(23, 'xabranchdname', 'dbsource02', 23);
     </insert>
 
     <select id="queryById" resultType="com.example.gtxs.xa.branch.pojo.Dept" parameterType="Integer">
@@ -13,7 +14,11 @@
     </select>
 
     <select id="queryAll" resultType="com.example.gtxs.xa.branch.pojo.Dept">
-        select * from dept;
+        SELECT deptno as deptno,
+        dname as dname,
+        db_source as dbsource,
+        length as length
+        FROM dept;
     </select>
 
     <delete id="deleteDept" parameterType="Integer">

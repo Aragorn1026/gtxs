@@ -17,7 +17,7 @@ public class DeptMapperServiceImpl implements DeptMapperService{
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    @GtxsXATransaction(name = "xadept")
+    @GtxsXATransaction(name = "xadeptadd")
     public boolean addDept(Dept dept) {
         return deptDao.addDept(dept);
     }

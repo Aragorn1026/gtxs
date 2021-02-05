@@ -5,8 +5,8 @@ spring:
   application:
     name: gtxsdemoxabranch
   datasource:
-    url: jdbc:mysql://59.111.148.79:3306/db02
-    username: root
+    url: jdbc:mysql://59.111.223.174:13306/db02
+    username: mysql
     password: 327604_Zcq
     driver-class-name: com.mysql.jdbc.Driver
 
@@ -18,8 +18,8 @@ mybatis:
 
 xabranch:
   datasource:
-    url: jdbc:mysql://59.111.148.79:3306/db02
-    username: root
+    url: jdbc:mysql://59.111.223.174:13306/db02
+    username: mysql
     password: 327604_Zcq
     driver-class-name: com.mysql.jdbc.Driver
 

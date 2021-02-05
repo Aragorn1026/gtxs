@@ -18,38 +18,27 @@ public class DeptController {
     @Autowired
     DeptMapperService deptMapperService;
 
-    @Autowired
-    RestTemplate restTemplate;
-
-    @GtxsXATransaction
-    @Transactional(rollbackFor = Exception.class)
     @PostMapping("/dept/add")
     public boolean addDept(Dept dept){
         return deptMapperService.addDept(dept);
     }
 
 
-
-//    @GtxsXATransaction
     @GetMapping("/dept/get/{id}")
     public Dept queryById(@PathVariable("id") Integer id){
         return deptMapperService.queryById(id);
     }
 
-//    @GtxsXATransaction
     @GetMapping ("/dept/list")
     public List<Dept> queryAll(){
-//        restTemplate.getForObject("http://localhost:10623/dept/list",String.class);
         return deptMapperService.queryAll();
     }
 
-//    @GtxsXATransaction
     @GetMapping ("/dept/delete/{id}")
     public boolean deleteDept(@PathVariable("id") Integer id){
         return deptMapperService.deleteDept(id);
     }
 
-//    @GtxsXATransaction
     @GetMapping("/dept/descdeptno")
     public Integer descDeptno() {
         return deptMapperService.descDeptno();

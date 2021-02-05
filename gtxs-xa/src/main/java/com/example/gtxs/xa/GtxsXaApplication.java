@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.example.gtxs.xa", "com.netease.cloud.gtxs", "com.example.gtxs.xa.branch", "com.example.gtxs.api", "com.example.gtxs","com.example.gtxs.branch"})
+@ComponentScan(basePackages = {"com.example.gtxs", "com.netease.cloud.gtxs"})
 @ImportResource(locations = {"classpath:repository-bean.xml"})
 public class GtxsXaApplication {
 
