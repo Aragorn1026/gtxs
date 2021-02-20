@@ -5,11 +5,11 @@
 <mapper namespace="com.example.gtxs.xa.branch.dao.DeptDao">
 
     <insert id="addDept" parameterType="com.example.gtxs.xa.branch.pojo.Dept">
-        INSERT INTO dept (deptno, dname, db_source, `length`) VALUES(23, 'xabranchdname', 'dbsource02', 23);
+        INSERT INTO dept (deptno, dname, db_source, llength) VALUES(23, 'xabranchdname', 'oracle02', 23)
     </insert>
 
     <select id="queryById" resultType="com.example.gtxs.xa.branch.pojo.Dept" parameterType="Integer">
-        select * from dept where deptno = #{deptno};
+        select * from dept where deptno = #{deptno}
     </select>
 
     <select id="queryAll" resultType="com.example.gtxs.xa.branch.pojo.Dept">
@@ -31,11 +31,11 @@
     </select>
 
     <delete id="deleteDept" parameterType="Integer">
-        delete from dept where deptno = #{deptno};
+        delete from dept where deptno = #{deptno}
     </delete>
 
     <select id="descDeptno" resultType="Integer">
-        select deptno from dept order by deptno desc limit 1;
+        select deptno from dept order by deptno desc
     </select>
 
 </mapper>
