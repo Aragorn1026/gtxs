@@ -14,6 +14,8 @@ public interface DeptDao {
 
     public List<Dept> queryAll();
 
+    public List<Dept> query();
+
     public boolean deleteDept(Integer id);
 
     public Integer descDeptno();

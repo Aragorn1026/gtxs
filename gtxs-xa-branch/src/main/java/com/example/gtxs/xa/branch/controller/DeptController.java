@@ -34,6 +34,9 @@ public class DeptController {
         return deptMapperService.queryAll();
     }
 
+    @GetMapping("/dept/query")
+    public List<Dept> query(){ return deptMapperService.query(); }
+
     @GetMapping ("/dept/delete/{id}")
     public boolean deleteDept(@PathVariable("id") Integer id){
         return deptMapperService.deleteDept(id);

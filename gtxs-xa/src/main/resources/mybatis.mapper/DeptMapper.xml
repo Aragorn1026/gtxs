@@ -13,7 +13,11 @@
     </select>
 
     <select id="queryAll" resultType="com.example.gtxs.xa.pojo.Dept">
-        select deptno, dname, db_source, length from dept;
+        SELECT deptno as deptno,
+        dname as dname,
+        db_source as dbsource,
+        length as length
+        FROM dept;
     </select>
 
     <delete id="deleteDept" parameterType="Integer">

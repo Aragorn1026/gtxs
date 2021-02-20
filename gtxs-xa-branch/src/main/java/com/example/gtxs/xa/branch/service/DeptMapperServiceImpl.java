@@ -27,7 +27,7 @@ public class DeptMapperServiceImpl implements DeptMapperService{
     public boolean addDept(Dept dept) {
         Map<String,String> map = new HashMap<String,String>();
         restTemplate.getForObject("http://localhost:10623/dept/list",String.class);
-//        restTemplate.postForObject("http://localhost:10623/dept/add",map,String.class);
+        restTemplate.postForObject("http://localhost:10623/dept/add",map,String.class);
         return deptDao.addDept(dept);
     }
 
@@ -43,6 +43,13 @@ public class DeptMapperServiceImpl implements DeptMapperService{
     @GtxsXATransaction(name = "xabranch-list")
     public List<Dept> queryAll() {
         return deptDao.queryAll();
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    @GtxsXATransaction(name = "xabranch-query")
+    public List<Dept> query() {
+        return deptDao.query();
     }
 
     @Override
