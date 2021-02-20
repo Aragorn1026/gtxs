@@ -2,24 +2,24 @@ server:
   port: 12307
 
 #mysql数据源
-spring:
-  application:
-    name: gtxsdemoxabranch
-  datasource:
-    url: jdbc:mysql://59.111.223.174:13306/db02
-    username: mysql
-    password: 327604_Zcq
-    driver-class-name: com.mysql.jdbc.Driver
-
-#Oracle数据源
 #spring:
 #  application:
 #    name: gtxsdemoxabranch
 #  datasource:
-#    url: jdbc:oracle:thin:@59.111.223.174:11521:orcl
-#    username: scott
+#    url: jdbc:mysql://59.111.223.174:13306/db02
+#    username: mysql
 #    password: 327604_Zcq
-#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    driver-class-name: com.mysql.jdbc.Driver
+
+#Oracle数据源
+spring:
+  application:
+    name: gtxsdemoxabranch
+  datasource:
+    url: jdbc:oracle:thin:@59.111.223.174:11521:orcl
+    username: scott
+    password: 327604_Zcq
+    driver-class-name: oracle.jdbc.driver.OracleDriver
 
 mybatis:
   type-aliases-package: com.example.gtxs.xa.branch.pojo

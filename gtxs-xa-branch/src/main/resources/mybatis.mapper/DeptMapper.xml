@@ -16,15 +16,16 @@
         SELECT deptno as deptno,
         dname as dname,
         db_source as dbsource,
-        length as length
-        FROM dept;
+        llength as length
+        FROM dept
+<!--        select * from dept-->
     </select>
 
     <select id="query" resultType="com.example.gtxs.xa.branch.pojo.Dept">
         SELECT deptno as deptno,
         dname as dname,
         db_source as dbsource,
-        length as length
+        llength as length
         FROM dept
         order by length desc
     </select>
