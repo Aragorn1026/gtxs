@@ -1,0 +1,48 @@
+server:
+  port: 12341
+
+#mysql数据源
+spring:
+  application:
+    name: gtxsdemotccbranch
+  datasource:
+    url: jdbc:mysql://59.111.223.174:13306/db02
+    username: mysql
+    password: 327604_Zcq
+    driver-class-name: com.mysql.jdbc.Driver
+
+#Oracle数据源
+#spring:
+#  application:
+#    name: gtxsdemotccbranch
+#  datasource:
+#    url: jdbc:oracle:thin:@59.111.223.174:11521:orcl
+#    username: scott
+#    password: 327604_Zcq
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+mybatis:
+  mapper-locations: classpath*:mybatis.mapper/*.xml
+#  type-aliases-package: com.example.gtxs.xa.branch.pojo
+#  cofig-location: classpath*:mybatis/mabatis-controller.xml
+
+
+
+xabranch:
+  datasource:
+    url: jdbc:mysql://59.111.223.174:13306/db02
+    username: mysql
+    password: 327604_Zcq
+    driver-class-name: com.mysql.jdbc.Driver
+
+gtxs:
+  client:
+    txGroupId: bee0e496-6101-4d34-886f-7973d8af7b26
+  server:
+    address: gtxs-server-cust56.netease.com:9627
+  message:
+    local: true
+  service:
+    disable: false
+  logging:
+    level: debug

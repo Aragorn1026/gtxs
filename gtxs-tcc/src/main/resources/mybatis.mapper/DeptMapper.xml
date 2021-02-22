@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 绑定一个对应的dao/mapper接口-->
+<mapper namespace="com.example.gtxs.tcc.dao.DeptDao">
+
+    <insert id="addDept" parameterType="com.example.gtxs.tcc.pojo.Dept">
+        INSERT INTO dept (deptno, dname, db_source, `length`) VALUES(23, 'xabranchdname', 'dbsource02', 23);
+    </insert>
+
+    <select id="queryById" resultType="com.example.gtxs.tcc.pojo.Dept" parameterType="Integer">
+        select * from dept where deptno = #{deptno};
+    </select>
+
+    <select id="queryAll" resultType="com.example.gtxs.tcc.pojo.Dept">
+        SELECT deptno as deptno,
+        dname as dname,
+        db_source as dbsource,
+        length as length
+        FROM dept;
+    </select>
+
+    <select id="query" resultType="com.example.gtxs.tcc.pojo.Dept">
+        SELECT deptno as deptno,
+        dname as dname,
+        db_source as dbsource,
+        length as length
+        FROM dept
+        order by length desc
+    </select>
+
+    <delete id="deleteDept" parameterType="Integer">
+        delete from dept where deptno = #{deptno};
+    </delete>
+
+    <select id="descDeptno" resultType="Integer">
+        select deptno from dept order by deptno desc limit 1;
+    </select>
+
+</mapper>
