@@ -31,7 +31,7 @@ public class TransactionController {
 
         MultiValueMap<String,Object> paramMap = new LinkedMultiValueMap();
         paramMap.add("dname", "运行部");
-        restTemplate.postForEntity("http://127.0.0.1:12408/transa/fmt/add", paramMap, String.class, new Object[0]);
+        restTemplate.postForEntity("http://127.0.0.1:12342/transa/fmt/add", paramMap, String.class, new Object[0]);
 
         System.out.println("gtxs fmt tx comfire");
         throw new RuntimeException("gtxs fmt mode 测试报个错");
@@ -46,7 +46,7 @@ public class TransactionController {
 //      远程post调用
         MultiValueMap<String, Object> paramMap = new LinkedMultiValueMap<String, Object>();
         paramMap.add("dname", "生产部");
-        restTemplate.postForObject("http://127.0.0.1:12408/transa/tcc/add",paramMap,String.class);
+        restTemplate.postForObject("http://127.0.0.1:12342/transa/tcc/add",paramMap,String.class);
 
         System.out.println("gtxs tcc tx comfire");
 //      抛出自定义异常
@@ -62,7 +62,7 @@ public class TransactionController {
 
         MultiValueMap<String, Object> paramMap = new LinkedMultiValueMap<String, Object>();
         paramMap.add("dname", "生产部");
-        restTemplate.postForObject("http://127.0.0.1:12408/transa/saga/add",paramMap,String.class);
+        restTemplate.postForObject("http://127.0.0.1:12342/transa/saga/add",paramMap,String.class);
 
         System.out.println("gtxs tcc saga comfire");
 

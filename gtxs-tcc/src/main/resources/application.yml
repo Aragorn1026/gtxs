@@ -7,7 +7,7 @@ spring:
     name: gtxstccbranch
   datasource:
     url: jdbc:mysql://103.196.65.67:13306/db01?useSSL=false
-    username: mysql
+    username: root
     password: 327604_Zcq
     driver-class-name: com.mysql.jdbc.Driver
 
@@ -31,7 +31,7 @@ mybatis:
 tcc:
   datasource:
     url: jdbc:mysql://103.196.65.67:13306/db01
-    username: mysql
+    username: root
     password: 327604_Zcq
     driver-class-name: com.mysql.jdbc.Driver
 
