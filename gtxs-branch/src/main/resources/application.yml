@@ -1,10 +1,10 @@
 server:
-  port: 12344
+  port: 12342
 
 #mysql数据源
 spring:
   application:
-    name: gtxsxabranch
+    name: gtxstccbranch
   datasource:
     url: jdbc:mysql://59.111.223.174:13306/db02?useSSL=false
     username: mysql
@@ -14,7 +14,7 @@ spring:
 #Oracle数据源
 #spring:
 #  application:
-#    name: gtxsdemoxabranch
+#    name: gtxsdemotccbranch
 #  datasource:
 #    url: jdbc:oracle:thin:@59.111.223.174:11521:orcl
 #    username: scott
@@ -22,14 +22,14 @@ spring:
 #    driver-class-name: oracle.jdbc.driver.OracleDriver
 
 mybatis:
-  type-aliases-package: com.example.gtxs.xa.branch.pojo
-  cofig-location: classpath*:mybatis/mabatis-controller.xml
-  mapper-locations: classpath*:mybatis/mapper/*.xml
+  mapper-locations: classpath*:mybatis.mapper/*.xml
+  typeAliasesPackage: com.example.gtxs.branch.pojo
+#  type-aliases-package: com.example.gtxs.xa.branch.pojo
+#  cofig-location: classpath*:mybatis/mabatis-controller.xml
 
-
-xabranch:
+branch:
   datasource:
-    url: jdbc:mysql://59.111.223.174:13306/db02?useSSL=false
+    url: jdbc:mysql://59.111.223.174:13306/db02
     username: mysql
     password: 327604_Zcq
     driver-class-name: com.mysql.jdbc.Driver

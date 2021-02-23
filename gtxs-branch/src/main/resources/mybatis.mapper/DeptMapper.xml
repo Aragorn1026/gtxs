@@ -2,17 +2,17 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace 绑定一个对应的dao/mapper接口-->
-<mapper namespace="com.example.gtxs.xa.branch.dao.DeptDao">
+<mapper namespace="com.example.gtxs.branch.dao.DeptDao">
 
-    <insert id="addDept" parameterType="com.example.gtxs.xa.branch.pojo.Dept">
-        INSERT INTO dept (deptno, dname, db_source, `length`) VALUES(12344, 'xabranch_mysql_db02', 'jdpri_mysql_db02', 12344);
+    <insert id="addDept" parameterType="com.example.gtxs.branch.pojo.Dept">
+        INSERT INTO dept (deptno, dname, db_source, `length`) VALUES(23, 'branch_mysql_db02', 'jdpri_mysql_db02', 23);
     </insert>
 
-    <select id="queryById" resultType="com.example.gtxs.xa.branch.pojo.Dept" parameterType="Integer">
+    <select id="queryById" resultType="com.example.gtxs.branch.pojo.Dept" parameterType="Integer">
         select * from dept where deptno = #{deptno};
     </select>
 
-    <select id="queryAll" resultType="com.example.gtxs.xa.branch.pojo.Dept">
+    <select id="queryAll" resultType="com.example.gtxs.branch.pojo.Dept">
         SELECT deptno as deptno,
         dname as dname,
         db_source as dbsource,
@@ -20,7 +20,7 @@
         FROM dept;
     </select>
 
-    <select id="query" resultType="com.example.gtxs.xa.branch.pojo.Dept">
+    <select id="query" resultType="com.example.gtxs.branch.pojo.Dept">
         SELECT deptno as deptno,
         dname as dname,
         db_source as dbsource,

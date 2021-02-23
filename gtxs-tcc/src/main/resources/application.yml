@@ -4,9 +4,9 @@ server:
 #mysql数据源
 spring:
   application:
-    name: gtxsdemotccbranch
+    name: gtxstccbranch
   datasource:
-    url: jdbc:mysql://59.111.223.174:13306/db02
+    url: jdbc:mysql://103.196.65.67:13306/db01?useSSL=false
     username: mysql
     password: 327604_Zcq
     driver-class-name: com.mysql.jdbc.Driver
@@ -28,9 +28,9 @@ mybatis:
 
 
 
-xabranch:
+tcc:
   datasource:
-    url: jdbc:mysql://59.111.223.174:13306/db02
+    url: jdbc:mysql://103.196.65.67:13306/db01
     username: mysql
     password: 327604_Zcq
     driver-class-name: com.mysql.jdbc.Driver

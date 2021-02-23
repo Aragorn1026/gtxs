@@ -5,7 +5,7 @@
 <mapper namespace="com.example.gtxs.xa.dao.DeptDao">
 
     <insert id="addDept" parameterType="com.example.gtxs.xa.pojo.Dept">
-        insert into dept(deptno, dname, db_source,length) values (13,'xadname','db01',13);
+        insert into dept(deptno, dname, db_source,length) values (12343,'xa_mysql_db01','jdbeta_mysql_db01',12343);
     </insert>
 
     <select id="queryById" resultType="com.example.gtxs.xa.pojo.Dept" parameterType="Integer">

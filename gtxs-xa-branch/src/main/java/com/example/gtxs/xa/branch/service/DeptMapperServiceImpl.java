@@ -26,8 +26,8 @@ public class DeptMapperServiceImpl implements DeptMapperService{
     @GtxsXATransaction(name = "xabranch-add")    // 事务别名
     public boolean addDept(Dept dept) {
         Map<String,String> map = new HashMap<String,String>();
-        restTemplate.getForObject("http://localhost:10623/dept/list",String.class);
-        restTemplate.postForObject("http://localhost:10623/dept/add",map,String.class);
+        restTemplate.getForObject("http://localhost:12343/dept/list",String.class);
+        restTemplate.postForObject("http://localhost:12343/dept/add",map,String.class);
         return deptDao.addDept(dept);
     }
 

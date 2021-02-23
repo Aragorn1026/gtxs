@@ -9,9 +9,9 @@
     </bean>
 
     <bean id="mysqlXADataSource" class="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource">
-        <property name="URL" value="${test.datasource.url}"/>
-        <property name="user" value="${test.datasource.username}"/>
-        <property name="password" value="${test.datasource.password}"/>
+        <property name="URL" value="${spring.datasource.url}"/>
+        <property name="user" value="${spring.datasource.username}"/>
+        <property name="password" value="${spring.datasource.password}"/>
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
